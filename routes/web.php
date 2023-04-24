@@ -27,6 +27,10 @@ Route::post('/uploadfood', [AdminController::class, "upload"]);
 
 Route::get('/deletefoodmenu/{id}', [AdminController::class, "deletefoodmenu"]);
 
+Route::get('/editfoodmenu/{id}', [AdminController::class, "editfoodmenu"]);
+
+Route::post('/update/{id}', [AdminController::class, "update"]);
+
 Route::get('/redirects', [HomeController::class, "redirects"]);
 
 Route::middleware([
