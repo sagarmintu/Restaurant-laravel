@@ -33,6 +33,10 @@ Route::post('/update/{id}', [AdminController::class, "update"]);
 
 Route::get('/redirects', [HomeController::class, "redirects"]);
 
+Route::post('/reservation', [AdminController::class, "reservation"]);
+
+Route::get('/viewreservationlists', [AdminController::class, "viewreservationlists"]);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
