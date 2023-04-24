@@ -42,8 +42,7 @@
                         <input type="submit" name="submit" value="Save">
                     </div>
                 </form>
-
-                <div>
+            <div>
             
         </div>
             @include('admin.adminjs')

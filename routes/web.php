@@ -37,6 +37,10 @@ Route::post('/reservation', [AdminController::class, "reservation"]);
 
 Route::get('/viewreservationlists', [AdminController::class, "viewreservationlists"]);
 
+Route::get('/viewchef', [AdminController::class, "viewchef"]);
+
+Route::post('/uploadchef', [AdminController::class, "uploadchef"]);
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
