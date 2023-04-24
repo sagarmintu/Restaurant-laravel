@@ -6,13 +6,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    @include('admin.admincss')
-
+      @include('admin.admincss')
     </head>
-  <body>
-    @include('admin.navbar')
-
-    @include('admin.adminjs')
-    
-  </body>
+    <body>
+        <div class="container-scroller">
+            @include('admin.navbar')
+            
+        </div>
+            @include('admin.adminjs')
+    </body>
 </html>
