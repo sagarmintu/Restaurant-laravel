@@ -78,15 +78,16 @@
                             <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
                             <li class="scroll-to-section">
-                                <a href="#">
                                     @auth
+                                    <a href="{{url('/showcart', Auth::user()->id)}}">
                                         Cart{{$count}}
+                                    </a>
                                     @endauth
 
                                     @guest
                                         Cart[0]
-                                    @endguest
-                                </a>
+                                    @endguest 
+                                    </a>
                             </li> 
                             <li>
                                 @if (Route::has('login'))
