@@ -55,6 +55,9 @@ Route::get('/remove/{id}', [HomeController::class, "remove"]);
 
 Route::post('/orderConfirm', [HomeController::class, "orderConfirm"]);
 
+Route::get('/orders', [AdminController::class, "orders"]);
+
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
