@@ -131,11 +131,22 @@
                 <th style="padding: 30px;">Action</th>
             </tr>
 
+    <form action="{{url('orderConfirm')}}" method="POST">
+        @csrf
             @foreach($data as $data)
             <tr align="center">
-                <td>{{$data->title}}</td>
-                <td>{{$data->price}}</td>
-                <td>{{$data->quantity}}</td>
+                <td>
+                    <input type="text" name="foodname[]" value="{{$data->title}}" hidden="">
+                    {{$data->title}}
+                </td>
+                <td>
+                <input type="text" name="price[]" value="{{$data->price}}" hidden="">
+                    {{$data->price}}
+                </td>
+                <td>
+                <input type="text" name="quantity[]" value="{{$data->quantity}}" hidden="">
+                    {{$data->quantity}}
+                </td>
             </tr>
             @endforeach
 
@@ -150,7 +161,7 @@
         </table>
 
         <div align="center" style="padding: 10px;">
-            <button class="btn btn-sm btn-primary" id="order">Order Now</button>
+            <button class="btn btn-sm btn-primary" type="button" id="order">Order Now</button>
         </div>
 
         <div align="center" style="padding: 10px;display: none;" id="appear">
@@ -171,6 +182,7 @@
                 <button type="button" class="btn btn-sm btn-danger" id="close">Close</button>
             </div>
         </div>
+    </form>
 
     </div>
     
