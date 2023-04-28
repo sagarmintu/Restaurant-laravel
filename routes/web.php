@@ -57,6 +57,8 @@ Route::post('/orderConfirm', [HomeController::class, "orderConfirm"]);
 
 Route::get('/orders', [AdminController::class, "orders"]);
 
+Route::get('/search', [AdminController::class, "search"]);
+
 
 Route::middleware([
     'auth:sanctum',
