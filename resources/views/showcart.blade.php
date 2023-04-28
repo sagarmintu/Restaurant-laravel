@@ -23,6 +23,8 @@
 
     <link rel="stylesheet" href="assets/css/lightbox.css">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
     </head>
     
     <body>
@@ -75,7 +77,6 @@
                                     <li><a href="#">Features Page 4</a></li>
                                 </ul>
                             </li>
-                            <!-- <li class=""><a rel="sponsored" href="https://templatemo.com" target="_blank">External URL</a></li> -->
                             <li class="scroll-to-section"><a href="#reservation">Contact Us</a></li> 
                             <li class="scroll-to-section">
                                     @auth
@@ -112,11 +113,7 @@
                                     </div>
                                 @endif
                             </li>
-
-                        </ul>        
-                        <!-- <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a> -->
+                        </ul>  
                         <!-- ***** Menu End ***** -->
                     </nav>
                 </div>
@@ -151,6 +148,30 @@
             @endforeach
 
         </table>
+
+        <div align="center" style="padding: 10px;">
+            <button class="btn btn-sm btn-primary" id="order">Order Now</button>
+        </div>
+
+        <div align="center" style="padding: 10px;display: none;" id="appear">
+            <div style="padding: 10px;">
+                <label for="Name">Name</label>
+                <input type="text" name="name" id="name" placeholder="Enter Product Name">
+            </div>
+            <div style="padding: 10px;">
+                <label for="Phone">Phone</label>
+                <input type="text" name="phone" id="phone" placeholder="Enter Phone Number">
+            </div>
+            <div style="padding: 10px;">
+                <label for="Address">Address</label>
+                <input type="text" name="address" id="address" placeholder="Enter Address">
+            </div>
+            <div style="padding: 10px;">
+                <input class="btn btn-sm btn-success" type="submit" value="Order">
+                <button type="button" class="btn btn-sm btn-danger" id="close">Close</button>
+            </div>
+        </div>
+
     </div>
     
 
@@ -192,5 +213,16 @@
         });
 
     </script>
+
+    <script>
+        $("#order").click(function(){
+            $("#appear").show();
+        });
+        
+        $("#close").click(function(){
+            $("#appear").hide();
+        });
+    </script>
+
 </body>
 </html>
